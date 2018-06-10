@@ -1,5 +1,5 @@
 <template>
-  <div ref="wrapper">
+  <div ref="wrapper" class="hehe">
     <slot></slot>
   </div>
 </template>
@@ -35,13 +35,13 @@
       },
       refreshDelay: {
         type: Number,
-        default: 20
+        default: 50
       }
     },
     mounted() {
       setTimeout(() => {
         this._initScroll()
-      }, 20)
+      }, 50)
     },
     methods: {
       _initScroll() {
@@ -94,6 +94,7 @@
       data() {
         setTimeout(() => {
           this.refresh()
+          // console.log(this.data)
         }, this.refreshDelay)
       }
     }
