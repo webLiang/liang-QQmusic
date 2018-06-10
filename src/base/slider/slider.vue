@@ -62,7 +62,7 @@
     methods: {
       _setSliderWidth(isResize) {
         this.children = this.$refs.sliderGroup.children
-
+        //console.log(this.$refs.sliderGroup.childNodes)
         let width = 0
         let sliderWidth = this.$refs.slider.clientWidth
         for (let i = 0; i < this.children.length; i++) {
@@ -86,7 +86,8 @@
           snap: true,
           snapLoop: this.loop,
           snapThreshold: 0.3,
-          snapSpeed: 400
+          snapSpeed: 400,
+          click:true
         })
 
         this.slider.on('scrollEnd', () => {
