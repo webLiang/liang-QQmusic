@@ -1,6 +1,5 @@
 <template>
   <div class="singer" ref="singer">
-    hello singer
     <list-view @select="selectSinger" :data="singers" ref="list"></list-view>
     <router-view></router-view>
   </div>
@@ -44,7 +43,8 @@
           if (res.code === ERR_OK) {
             this.singers = this._normalizeSinger(res.data.list)
             //this.singers = res.data.list
-            console.log(this._normalizeSinger(this.singers))
+            //console.log(res.data.list)
+            console.log(this.singers)
           }
         })
       },
